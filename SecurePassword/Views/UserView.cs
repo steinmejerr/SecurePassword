@@ -12,6 +12,14 @@ namespace SecurePassword.Views
         /// </summary>
         public void ShowMenu()
         {
+            // Initial info screen
+            Console.WriteLine("===== Secure Login System =====");
+            Console.WriteLine("You are about to test my program – you can log in or register.");
+            Console.WriteLine("Press Enter to continue...");
+            Console.ReadLine();
+
+            // Clear console before showing the actual menu
+            Console.Clear();
             Console.WriteLine("===== Secure Login System =====");
             Console.WriteLine("1. Opret");   // Register
             Console.WriteLine("2. Login");   // Log in
@@ -25,7 +33,7 @@ namespace SecurePassword.Views
         /// <returns>The email entered by the user.</returns>
         public string GetEmail()
         {
-            Console.Write("Email: ");
+            Console.Write("Indtast Email: ");
             return Console.ReadLine();
         }
 
@@ -35,7 +43,7 @@ namespace SecurePassword.Views
         /// <returns>The password entered by the user.</returns>
         public string GetPassword()
         {
-            Console.Write("Adgangskode: ");
+            Console.Write("Indtast Adgangskode: ");
             return Console.ReadLine();
         }
 
