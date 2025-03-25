@@ -1,21 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SecurePassword.Controllers;
 
 namespace SecurePassword
 {
     /// <summary>
-    /// My main class
+    /// Entry point of the SecurePassword application.
+    /// Initializes and starts the user controller.
     /// </summary>
     internal class Program
     {
+        /// <summary>
+        /// Main method that runs when the application starts.
+        /// </summary>
+        /// <param name="args">Command-line arguments (not used).</param>
         static void Main(string[] args)
         {
-            UserController controller = new UserController(); // Make a new instance of the controller
-            controller.Start(); // Start the program
+            // Create a new instance of the UserController, which handles user input and logic.
+            UserController controller = new UserController();
+
+            // Start the main application loop.
+            controller.Start();
         }
     }
 }
